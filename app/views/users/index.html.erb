@@ -1,0 +1,19 @@
+
+
+<h1>All Users</h1>
+
+<div id="wrapper">
+  <% @users.each do |user| %>
+    <div class="userInfo">
+      <!-- If user has a photo show it
+      else show -->
+        <%= image_tag("dcflag_heart.png", :alt => "Profile Photo") %>
+      <!-- end -->
+      <br>
+      <%= link_to user[:fullname], user %>
+      <%= user[:neighborhood] %>
+      <%= user[:hobby] %>
+    </div>
+  <% end %>
+</div>
+<br>

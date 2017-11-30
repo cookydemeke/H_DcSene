@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> D_sCene </title>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" %>
+        <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=" + GOOGLE_JS_KEY %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <!-- ======= ======= ======= body ======= ======= ======= -->
+    <body>
+      <header>
+        <div id="logo">DsCene</div>
+        <div id="nav">
+          <ul>
+            <% if current_user %>
+              <div class="menuLine">
+                <li><%= link_to "Home", home_path %></li>
+                <li><%= link_to "Find Places in DC", "/search_local_places" %></li>
+                <li><%= link_to "My Profile", user_path(current_user)%></li>
+                <li><%= link_to 'All Members', users_path %></li>
+                <li><%= link_to "Send Message", new_user_message_path(current_user) %></li>
+                <li><%= link_to "My Messages", "/my_messages/" + current_user[:id].to_s %></li>
+                <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+              </div>
+            <% end %>
+          </ul>
+        </div>
+        <div id="adminOnly">
+          <% if current_user %>
+            <% if current_user[:admin] == true %>
+              <span>Admin Functions: </span>
+              <%= link_to "View/Edit Neighborhoods", neighborhoods_path %> |
+              <%= link_to 'View/Edit Languages', languages_path %>
+            <% end %>
+          <% end %>
+        </div>
+      </header>
+      <div id="yield" class="section" data-state="default">
+        <%= yield %>
+      </div>
+      <p id="notice"><%= notice %></p>
+      <footer>
+        <p>&copy; 2017 DsCene</p>
+        <p>Developed by: Cooky, Ian &amp; Megan</p>
+      </footer>
+    </body>
+</html>

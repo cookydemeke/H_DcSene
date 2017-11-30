@@ -1,0 +1,293 @@
+/* === general === */
+body {
+  width: 100%;
+  background-color: #eee;
+}
+#logo {
+  margin-left: 250px;
+  font-size: 70px;
+  font-family: 'Abril Fatface', cursive;
+}
+.section {
+  margin: 20px;
+}
+/* === nav === */
+#nav {
+  margin-left: -10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111; /* Change the link color to #111 (black) on hover */
+}
+.links {
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  background-color: #D9DADD;
+}
+#adminOnly {
+  margin-left: -10px;
+  padding: 2px;
+  text-align: right;
+  background-color: #333;
+  color: white;
+  font-size: 12px;
+}
+#adminOnly a {
+  color: white;
+  text-decoration: none;
+}
+#adminOnly a:hover {
+  text-decoration: underline;
+}
+/* === home page === */
+#slideshow {
+  margin: 50px auto;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  background-color: white;
+}
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+#homeMenu, #homeSlideshow {
+  width: 50%;
+}
+#homeMenu {
+  padding-left: 5px;
+  text-align: center;
+}
+#passwordReset, .backButton, .homeButtons, .homeButtons a {
+  text-decoration: none;
+  color: black;
+  font-family: Georgia;
+}
+.homeButtons, .homeButtons a {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.homeButtons {
+  box-sizing: border-box;
+  width: 120px;
+  margin: 8px auto;
+  padding: 5px;
+  transition: background-color .18s ease-in-out;
+  background-color: #6590BA;
+  border: 3px #6590BA solid;
+}
+#passwordReset:hover, .backButton:hover {
+  text-decoration: underline;
+}
+.homeButtons:hover {
+  background-color: white;
+}
+#userHome {
+  margin-left: -15px;
+  background-image: url("UnionRoof.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100px;
+}
+/* === flexbox wrapper === */
+.wrapper {
+  display: flex;
+  margin-top: 2px;
+  align-items: center;
+  align-content: space-around;
+  background-color: #D9DADD;
+}
+/* === profile display === */
+#profileInfo {
+  background-color: #AEA599;
+  border-style: double;
+  text-align: center;
+  width: 50%;
+  font-family: 'Abril Fatface', cursive;
+}
+.underPhoto{
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  background-color: #AEA599;
+}
+.addColor {
+  text-align: center;
+  background-color: #6590BA;
+}
+#profilePhoto {
+  width: 50%;
+}
+.defaultPhoto, .profile-photo > img {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+/* === forms === */
+.formBox {
+  text-align: center;
+}
+.field {
+  margin: 4px;
+}
+.typeBox, #messageBox {
+  background-color: white;
+  border: 2px solid #6590BA;
+  border-radius: 5px;
+  width: 200px;
+}
+#messageBox {
+  width: 340px;
+  height: 100px;
+}
+select {
+  border: 2px solid #6590BA;
+  width: 206px;
+  background-color: white;
+}
+/* === tables === */
+th {
+  visibility: hidden;
+}
+tr {
+  background-color: #eee;
+}
+/* === messages === */
+#messageTable {
+  width: 80%;
+}
+.messageWith {
+  width: 60%;
+}
+.messageAction {
+  width: 6%;
+  text-align: center;
+}
+#filterMessages {
+  background-color: #6590BA;
+  width: 50%;
+  text-align: center;
+}
+#newMessages {
+  width: 50%;
+  text-align: center;
+  margin-right: 50px;
+  background-color: #D9DADD;
+}
+#breweries, #restaurants, #cafes, #places {
+  width: 100px;
+  // float: left;
+  margin-left: 50px;
+  display: inline-block;
+  padding-left: 150px;
+}
+
+/* ==========  map style ========== */
+#messageTable {
+  background-color: #AEA599;
+  width: 80%;
+  text-align: center;
+}
+h1, h2 {
+  text-align: center;
+}
+#profileLinks {
+  display: block;
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+}
+#map {
+  width: auto;
+  height: 370px;
+  background-color: white;
+  border: solid 14px #AEA599;
+  margin-left: auto;
+  margin-right: auto;
+}
+#get-places-data {
+  width: 100px;
+  height: 20px;
+  padding: 5px;
+  margin-left: 24%;
+  margin-right: 30%;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  background-color: #AEA599;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 0 #777;
+}
+.surround_bar {
+  height: 55px;
+  width: auto;
+  background-color: #353023;
+}
+.findPlace {
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  background-color: #D9DADD;
+}
+#search-data {
+  height: 100px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.data-label{
+  height: 20px;
+  width: 175px;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.data-value{
+  height: 15px;
+  width: 105px;
+  margin-left: 10px;
+  margin-right: auto;
+  margin-bottom: 2px;
+}
+.data {
+  height: 40px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* === footer === */
+footer {
+  width: 100%;
+  margin-left: -10px;
+  padding: 5px;
+  text-align: center;
+  font-size: 10px;
+  background-color: #d9dadd;
+  clear: both;
+  position: absolute;
+}
+.userInfo {
+  display: inline-block;
+  padding-left: 150px;
+
+}

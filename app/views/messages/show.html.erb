@@ -1,0 +1,9 @@
+
+<h1>Your New Message</h1>
+
+<p><%= @message[:content] %></p>
+
+<div class="links">
+  <%= link_to 'Edit', edit_user_message_path(current_user, @message) %> |
+  <%= link_to 'Back', user_messages_path %>
+</div>

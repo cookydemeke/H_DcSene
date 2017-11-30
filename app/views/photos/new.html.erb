@@ -1,0 +1,28 @@
+<h2>Upload a Profile Photo</h2>
+<div class="formBox">
+  <%= form_with(model: @photo, url: photos_path, local: true) do |f| %>
+    <%= render 'shared/errors', object: @photo %>
+    <div class="form-group">
+      <%= radio_button_tag(:content_type, "image/jpeg") %>
+      <%= label_tag("image/jpeg") %>
+      <%= radio_button_tag(:content_type, "image/gif") %>
+      <%= label_tag("image/gif") %>
+      <%= radio_button_tag(:content_type, "image/png") %>
+      <%= label_tag("image/png") %>
+    </div>
+    <br>
+    <em>Photos must be under 1MB</em>
+
+    <div class="form-group">
+      <%= f.hidden_field :title, value: "Profile Photo", class: 'form-control' %>
+      <%= f.hidden_field :user_id, value: current_user[:id], class: 'form-control'%>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.file_field :image, class: 'form-control'%>
+    </div>
+    <br>
+    <%= f.submit 'Upload', class: 'btn btn-primary' %>
+  <% end %>
+</div>
